@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Shape : MonoBehaviour
 {
-
     public string ObjectClassName { get; private set; } = "Shape"; // Encapsulation
-
+    public float speed { get; private set; } = 0.5f; // Encapsulation
     public string shapeName { get; set; }
-
     private int m_numberOfCorners;
     public int numberOfCorners  // Encapsulation
     {  
@@ -16,14 +12,9 @@ public abstract class Shape : MonoBehaviour
         set
         {
             if (value < 0)
-            {
-
                 Debug.LogError("You can't set a negative number of corners!");
-            }
             else
-            {
                 m_numberOfCorners = value;
-            }
         }
     }
 
@@ -32,9 +23,8 @@ public abstract class Shape : MonoBehaviour
         Move();
     }
 
-    public float speed { get; private set; } = 0.5f; // Encapsulation
-
-    public virtual void Move() { // Abstraction
+    public virtual void Move()
+    { // Abstraction
         Debug.Log("Needs to be overriten");
     }
 

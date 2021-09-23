@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Box: Shape
 {
@@ -8,7 +6,6 @@ public class Box: Shape
     {
         Debug.Log("Box shape name: "+ shapeName);
         Debug.Log("Box class Object name: " + ObjectClassName); // Take from parent cannot set from child
-
         return shapeName;
     }
 
